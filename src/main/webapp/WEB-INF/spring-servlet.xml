@@ -74,12 +74,19 @@
     </beans:bean> -->
     
     <!-- Default bean name is 'mongo' -->
-    <mongo:mongo id="mongo" host="troup.mongohq.com" port="10081"/>
+   <!--  <mongo:mongo id="mongo" host="troup.mongohq.com" port="10081"/>
 
     <beans:bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <beans:constructor-arg ref="mongo"/>
         <beans:constructor-arg name="databaseName" value="JrGJFMWlktbBDwPCzxSMQ"/>
-    </beans:bean>
+    </beans:bean> -->
+    
+    <mongo:db-factory id="mongo"
+                  host="troup.mongohq.com"
+                  port="10081"
+                  dbname="JrGJFMWlktbBDwPCzxSMQ"
+                  username="cloudbees"
+                  password="8683de7027f647d652d42daf23d84362"/>
     
  
 
