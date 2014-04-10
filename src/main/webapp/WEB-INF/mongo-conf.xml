@@ -10,27 +10,27 @@
 	<import resource="spring-security.xml"/>
 
 	<!-- Default bean name is 'mongo' -->
-   <mongo:mongo id="mongo" host="localhost" port="27017"/>
+  <!--  <mongo:mongo id="mongo" host="localhost" port="27017"/>
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg ref="mongo"/>
         <constructor-arg name="databaseName" value="t9"/>
-    </bean> 
+    </bean>  -->
     
     <!-- Default bean name is 'mongo' -->
-<!-- <bean id="mongoCredentials" class="org.springframework.data.authentication.UserCredentials">
+ <bean id="mongoCredentials" class="org.springframework.data.authentication.UserCredentials">
     <constructor-arg name="username" value="cloudbees" />
     <constructor-arg name="password" value="faros" />
 </bean>
 
   <mongo:mongo id="mongo" host="troup.mongohq.com" port="10081"/>
 
-    <beans:bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <beans:constructor-arg ref="mongo"/>
-        <beans:constructor-arg name="databaseName" value="JrGJFMWlktbBDwPCzxSMQ"/>
-        <beans:constructor-arg name="userCredentials" ref="mongoCredentials"/>
-    </beans:bean> 
-     -->
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg ref="mongo"/>
+        <constructor-arg name="databaseName" value="JrGJFMWlktbBDwPCzxSMQ"/>
+        <constructor-arg name="userCredentials" ref="mongoCredentials"/>
+    </bean> 
+     
    
    <!-- <mongo:repositories base-package="org.groept.cloudMigration.repository" /> -->
  <!-- <mongo:repositories base-package="org.groept.cloudMigration.dao"></mongo:repositories> -->
